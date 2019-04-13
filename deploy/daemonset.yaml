@@ -16,7 +16,7 @@ spec:
       # serviceAccountName: k8s-spot-termination-handler
       containers:
       - name: k8s-spot-termination-handler
-        image: quay.io/pusher/k8s-spot-termination-handler:v0.1.0
+        image: docker.io/diseq/k8s-azspot-termination-handler:v0.1.0
         imagePullPolicy: IfNotPresent
         env:
           - name: NODE_NAME
@@ -31,4 +31,4 @@ spec:
             cpu: 100m
             memory: 100Mi
       nodeSelector:
-        "node-role.kubernetes.io/spot-worker": "true"
+        "node-role.kubernetes.io/azspot-worker": "true"
